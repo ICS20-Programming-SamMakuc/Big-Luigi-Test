@@ -11,25 +11,30 @@ class TitleScene extends Phaser.Scene {
     super({ key: 'titleScene' })
   }
 
+  // sets the background colour to white
   init (data) {
     this.cameras.main.setBackgroundColor('#000000')
   }
 
+  // loads the title scene from the assets folder
   preload () {
     console.log('Title Scene')
     this.load.image('titleSceneBackground', './assets/luigititlescreen (1).jpg')
+    this.load.image('titleSceneText', './assets/superluigititle.webp');
   }
 
-  create (data) {
-    this.titleSceneBackgroundImage = this.add.sprite(0, 0, 'titleSceneBackground').setScale(2.75)
-    this.titleSceneBackgroundImage.x = 1920 / 2
-    this.titleSceneBackgroundImage.y = 1080 / 2
+  // the title scene is created an centered here
+  create(data) {
+  this.titleSceneBackgroundImage = this.add.sprite(0, 0, 'titleSceneBackground').setScale(2.75);
+  this.titleSceneBackgroundImage.x = 1920 / 2;
+  this.titleSceneBackgroundImage.y = 1080 / 2;
 
-    this.titleSceneText = this.add.text(1920 / 2, (1080 / 2) + 350, 'Space Aliens', this.titleSceneTextStyle).setOrigin(0.5)
-  }
+  this.titleSceneImage = this.add.sprite(1920 / 2, (1080 / 2) + 350, 'titleSceneText').setScale(0.5);
+}
 
+  // switches from title scene to menu scene after 7 seconds
   update (time, delta) {
-    if (time > 6000) {
+    if (time > 7000) {
       this.scene.switch('menuScene')
     }
   }
