@@ -11,7 +11,7 @@ class TitleScene extends Phaser.Scene {
     super({ key: 'titleScene' })
   }
 
-  // sets the background colour to white
+  // sets the background colour to black
   init (data) {
     this.cameras.main.setBackgroundColor('#000000')
   }
@@ -19,11 +19,11 @@ class TitleScene extends Phaser.Scene {
   // loads the title scene from the assets folder
   preload () {
     console.log('Title Scene')
-    this.load.image('titleSceneBackground', './assets/luigititlescreen (1).jpg')
+    this.load.image('titleSceneBackground', './assets/luigititlescreen.jpg')
     this.load.image('titleSceneText', './assets/superluigititle.webp');
   }
 
-  // the title scene is created an centered here
+  // the title scene is created and centered here
   create(data) {
   this.titleSceneBackgroundImage = this.add.sprite(0, 0, 'titleSceneBackground').setScale(2.75);
   this.titleSceneBackgroundImage.x = 1920 / 2;
