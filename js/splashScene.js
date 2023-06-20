@@ -6,10 +6,12 @@
 // Edited on: June 2023
 // This is the Splash Scene
 
+// the SplashScene class represents a scene in a Phaser game that serves as the splash screen
 class SplashScene extends Phaser.Scene {
   constructor () {
-    super({ key: 'splashScene' })
-
+    // call the parent of Phaser.Scene and provide a key for identification
+    super({ key: 'splashScene' }); 
+    // initialize variables for the background image and text elements
     this.splashSceneBackgroundImage = null
   }
 

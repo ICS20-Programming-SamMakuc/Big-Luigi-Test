@@ -1,14 +1,15 @@
-/* global Phaser */
-
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
 // Created by: Mr. Coxall
 // Created on: Sep 2020
+// Edited by Sam Makuc
+// Edited on: June 2023
 // This is the Menu Scene
 
 // the MenuScene class represents a scene in a Phaser game that serves as the menu screen
 class MenuScene extends Phaser.Scene {
-  constructor () {// call the parent of Phaser.Scene and provide a key for identification
+  constructor () {
+    // call the parent of Phaser.Scene and provide a key for identification
     super({ key: 'menuScene' }); 
     // initialize variables for the background image and text elements
     this.menuSceneBackgroundImage = null
