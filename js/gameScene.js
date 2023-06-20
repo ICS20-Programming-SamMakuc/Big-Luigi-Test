@@ -11,7 +11,7 @@ class GameScene extends Phaser.Scene {
     console.log('Title Scene');
     this.load.image('gameSceneBackground', './assets/GameSceneBackground.jpg');
     this.load.image('luigi', 'assets/LuigiImage.png');
-    this.load.image('missile', 'assets/LuigiLightning (1).png');
+    this.load.image('missile', 'assets/LuigiLightning.png');
   }
 
   create() {
@@ -58,3 +58,5 @@ class GameScene extends Phaser.Scene {
 }
 
 export default GameScene;
+
+
